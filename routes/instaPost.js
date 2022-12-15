@@ -6,10 +6,10 @@ router.get("/fetch", async (req, res) => {
   try {
     console.log(req.body);
     const posts = await InstaPost.find().sort({ _id: "-1" });
-    res.json({
-      status: "success",
-      posts,
-    });
+    res.json(
+
+      posts
+    );
   } catch (error) {
     res.json({
       status: "Failed",
